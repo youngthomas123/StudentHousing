@@ -151,9 +151,9 @@
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(52, 550);
+            this.button1.Location = new System.Drawing.Point(52, 549);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(380, 48);
+            this.button1.Size = new System.Drawing.Size(380, 51);
             this.button1.TabIndex = 5;
             this.button1.Text = "REGISTER";
             this.button1.UseVisualStyleBackColor = false;
@@ -164,7 +164,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(52, 652);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(380, 48);
+            this.button2.Size = new System.Drawing.Size(380, 51);
             this.button2.TabIndex = 5;
             this.button2.Text = "BACK TO LOGIN PAGE";
             this.button2.UseVisualStyleBackColor = false;
@@ -197,7 +197,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.ResumeLayout(false);
             this.PerformLayout();
