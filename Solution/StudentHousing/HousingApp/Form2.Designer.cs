@@ -47,8 +47,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -66,7 +67,7 @@
             this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox1.Location = new System.Drawing.Point(52, 195);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(380, 31);
+            this.textBox1.Size = new System.Drawing.Size(171, 31);
             this.textBox1.TabIndex = 2;
             // 
             // textBox2
@@ -171,16 +172,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 624);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(69, 627);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(451, 25);
+            this.label5.Size = new System.Drawing.Size(348, 19);
             this.label5.TabIndex = 6;
             this.label5.Text = "If you already have an account / just made one, click on";
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(52, 288);
+            this.radioButton1.Location = new System.Drawing.Point(137, 288);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(75, 29);
             this.radioButton1.TabIndex = 7;
@@ -191,7 +193,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(192, 288);
+            this.radioButton2.Location = new System.Drawing.Point(258, 288);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(93, 29);
             this.radioButton2.TabIndex = 7;
@@ -204,11 +206,12 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label6.Location = new System.Drawing.Point(49, 162);
+            this.label6.Location = new System.Drawing.Point(52, 150);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(380, 30);
+            this.label6.Size = new System.Drawing.Size(125, 30);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Username (First name + Last name)";
+            this.label6.Text = "First Name";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label2
             // 
@@ -240,17 +243,6 @@
             this.panel5.Size = new System.Drawing.Size(380, 1);
             this.panel5.TabIndex = 3;
             // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(339, 288);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(90, 29);
-            this.radioButton3.TabIndex = 7;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Others";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -263,13 +255,32 @@
             this.linkLabel1.Text = "Terms of Service and Privacy Policy";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // textBox4
+            // 
+            this.textBox4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox4.Location = new System.Drawing.Point(258, 195);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(171, 31);
+            this.textBox4.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label7.Location = new System.Drawing.Point(258, 150);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(122, 30);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Last Name";
+            this.label7.Click += new System.EventHandler(this.label6_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(483, 712);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label5);
@@ -283,9 +294,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -320,7 +333,8 @@
         private Label label2;
         private Panel panel4;
         private Panel panel5;
-        private RadioButton radioButton3;
         private LinkLabel linkLabel1;
+        private TextBox textBox4;
+        private Label label7;
     }
 }
