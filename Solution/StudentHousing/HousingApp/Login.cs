@@ -12,23 +12,30 @@ namespace HousingApp
 
         private string UserName;
         private string Password;
-        private int UniqueId =0;
+        private int UniqueId = 0;
 
+        public Login() { }
         public Login(string userName, string password)
         {
             UserName = userName;
             Password = password;
-            Random random= new Random();
-            UniqueId= random.Next(1000, 10000);    
+            Random random = new Random();
+            UniqueId = random.Next(1000, 10000);
         }
         public string GetUsername()
         {
             return UserName;
         }
-        public string GetPassword() 
-        { 
+        public string GetPassword()
+        {
             return Password;
         }
+        public int GetUniqueId()
+        {
+            return UniqueId;
+        }
+        
+            
 
     }
 }

@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace HousingApp
 {
-    internal class Admin
+    public class Admin
     {
+        private string FirstName;
+        private string LastName;
+        private Login login;
+
+        public Admin(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            
+        }
+        public void SetLogin(string username, string password)
+        {
+            login = new Login(username, password);
+        }
+
+
     }
 }
