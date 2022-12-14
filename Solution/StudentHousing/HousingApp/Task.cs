@@ -26,11 +26,14 @@ namespace HousingApp
             this.groceries = new List<Grocery>();
         }
 
-        public Grocery AddGrocery(string name, double price)
+        public void AddGrocery(string name, double price)
         {
             Grocery NewGrocery = new Grocery(name, price);
-            this.groceries.Add(NewGrocery);
-            return NewGrocery;
+            this.groceries.Add(NewGrocery);   
+        }
+        public List<Grocery> GetGrocery()
+        {
+            return this.groceries;
         }
         public string GetTaskName() 
         { return this.TaskName; }
@@ -46,5 +49,7 @@ namespace HousingApp
 
         public bool GetStatus() 
         { return this.Status;}
+
+        
     }
 }
