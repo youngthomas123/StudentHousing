@@ -212,17 +212,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(740, 32);
+            this.label1.Location = new System.Drawing.Point(729, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 65);
+            this.label1.Size = new System.Drawing.Size(187, 70);
             this.label1.TabIndex = 0;
             this.label1.Text = "MENU";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Gray;
+            this.panel3.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel3.Controls.Add(this.linkLabel8);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.linkLabel7);
@@ -257,7 +257,7 @@
             // 
             this.linkLabel7.AutoSize = true;
             this.linkLabel7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel7.LinkColor = System.Drawing.Color.Red;
+            this.linkLabel7.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.linkLabel7.Location = new System.Drawing.Point(89, 630);
             this.linkLabel7.Name = "linkLabel7";
             this.linkLabel7.Size = new System.Drawing.Size(111, 30);
@@ -267,7 +267,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Gray;
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel4.Location = new System.Drawing.Point(1311, 135);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(300, 668);
