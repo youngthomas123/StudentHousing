@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace HousingApp
 {
-    internal class Arrangement
+    public class Arrangement
     {
-        string messages;
+        private string messages;
 
-        public Arrangement()
+        public Arrangement(string messages)
         {
-
+            this.messages = messages;
         }
 
-        string GetMessages() { return messages; }
+        public string GetMessages() 
+        { return messages; }
     }
 }
