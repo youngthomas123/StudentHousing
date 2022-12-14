@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Solution",
+    "\\Solution\\StudentHousing",
+    "\\Solution\\StudentHousing\\HousingApp"
   ],
-  "SelectedNode": "\\StudentHousing.sln",
+  "SelectedNode": "\\Solution\\StudentHousing\\HousingApp\\Rule.cs",
   "PreviewInSolutionExplorer": false
 }
