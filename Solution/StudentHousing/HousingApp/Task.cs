@@ -12,7 +12,8 @@ namespace HousingApp
         private string TaskDescription="";
         private string StartDate = "";
         private string EndDate = "";
-        private bool Status; 
+        private bool Status;
+        private List<Grocery> groceries;
         
 
         public Task(string TaskName, string TaskDescription, string StartDate, string EndDate, bool Status) 
@@ -22,8 +23,15 @@ namespace HousingApp
             this.StartDate = StartDate;
             this.EndDate = EndDate;
             this.Status = Status;
+            this.groceries = new List<Grocery>();
         }
 
+        public Grocery AddGrocery(string name, double price)
+        {
+            Grocery NewGrocery = new Grocery(name, price);
+            this.groceries.Add(NewGrocery);
+            return NewGrocery;
+        }
         public string GetTaskName() 
         { return this.TaskName; }
 
