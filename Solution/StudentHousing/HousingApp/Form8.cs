@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace HousingApp
 {
-    public partial class Form5 : Form
+    public partial class Form8 : Form
     {
-        public Form5()
+        public Form8()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
