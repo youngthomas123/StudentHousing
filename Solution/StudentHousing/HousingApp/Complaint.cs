@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace HousingApp
 {
-    internal class Complaint
+    public class Complaint
     {
-        string complaints;
-        public Complaint()
+        private string complaints;
+        public Complaint(string complaints)
         {
-
+            this.complaints = complaints;
         }
-        string GetComplaints() { return complaints; }
+        public string GetComplaints() 
+        { return complaints; }
     }
 }

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace HousingApp
 {
-    internal class Rent
+    public class Rent
     {
-        double rent;
-        public Rent()
+        private double rent;
+        public Rent(double rent)
         {
-
+            this.rent = rent;
         }
 
-        double GetRent()
+        public double GetRent()
         { return rent; }
     }
 }
