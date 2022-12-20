@@ -16,5 +16,15 @@ namespace HousingApp
         private List<House> AllHouse;
         private List<Admin> AllAdmins;
 
+
+        public void AddStudents(Student student)
+        {
+            AllStudents.Add(student);
+        }
+
+        public List<Student> GetStudents()
+        {
+            return this.AllStudents;
+        }
     }
 }
