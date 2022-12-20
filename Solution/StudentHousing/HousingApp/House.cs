@@ -23,5 +23,10 @@ namespace HousingApp
         {
             this.admin = admin; 
         }
+
+        public void AddStudentToHouse(Student student)
+        {
+            studentsInHouse.Add(student);   
+        }
     }
 }
