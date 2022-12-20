@@ -8,21 +8,20 @@ namespace HousingApp
 {
     public class Task
     {
-        private string TaskName="";
-        private string TaskDescription="";
-        private string StartDate = "";
-        private string EndDate = "";
+        private string TaskName;
+        private string TaskDescription;
+        private string StartDate;
+        private string EndDate;
         private bool Status;
         private List<Grocery> groceries;
         
 
-        public Task(string TaskName, string TaskDescription, string StartDate, string EndDate, bool Status) 
+        public Task(string TaskName, string TaskDescription, string StartDate, string EndDate) 
         { 
             this.TaskName = TaskName;
             this.TaskDescription = TaskDescription;
             this.StartDate = StartDate;
             this.EndDate = EndDate;
-            this.Status = Status;
             this.groceries = new List<Grocery>();
         }
 
@@ -35,21 +34,14 @@ namespace HousingApp
         {
             return this.groceries;
         }
-        public string GetTaskName() 
-        { return this.TaskName; }
-
-        public string GetTaskDescription() 
-        { return this.TaskDescription; }
-
-        public string GetStartDate() 
-        { return this.StartDate; }
-
-        public string GetEndDate() 
-        { return this.EndDate; }
-
-        public bool GetStatus() 
-        { return this.Status;}
-
-        
+        public bool TaskDone()
+        {
+            this.Status = true;
+            return this.Status;
+        }
+        public override string ToString()
+        {
+            return $"{this.TaskName}: ({this.TaskDescription})  Starts at: ({this.StartDate})  Ends at: ({this.EndDate})";
+        }
     }
 }
