@@ -33,20 +33,29 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Tabpage1 = new System.Windows.Forms.TabPage();
+            this.FinishTaskButton = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.CreateTaskButton = new System.Windows.Forms.Button();
+            this.EndDateBox = new System.Windows.Forms.TextBox();
+            this.StartDateBox = new System.Windows.Forms.TextBox();
+            this.TaskDescriptionBox = new System.Windows.Forms.TextBox();
+            this.TaskNameBox = new System.Windows.Forms.TextBox();
+            this.TEndDateLabel = new System.Windows.Forms.Label();
+            this.TStartDateLabel = new System.Windows.Forms.Label();
+            this.TDescriptionLabel = new System.Windows.Forms.Label();
+            this.TaskNameLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Tabpage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,6 +100,16 @@
             this.panel2.Size = new System.Drawing.Size(301, 668);
             this.panel2.TabIndex = 1;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(274, 238);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -112,6 +131,7 @@
             // 
             // Tabpage1
             // 
+            this.Tabpage1.Controls.Add(this.FinishTaskButton);
             this.Tabpage1.Controls.Add(this.listBox2);
             this.Tabpage1.Location = new System.Drawing.Point(4, 34);
             this.Tabpage1.Name = "Tabpage1";
@@ -121,18 +141,36 @@
             this.Tabpage1.Text = "View";
             this.Tabpage1.UseVisualStyleBackColor = true;
             // 
+            // FinishTaskButton
+            // 
+            this.FinishTaskButton.Location = new System.Drawing.Point(811, 509);
+            this.FinishTaskButton.Name = "FinishTaskButton";
+            this.FinishTaskButton.Size = new System.Drawing.Size(173, 55);
+            this.FinishTaskButton.TabIndex = 1;
+            this.FinishTaskButton.Text = "Finish Task";
+            this.FinishTaskButton.UseVisualStyleBackColor = true;
+            this.FinishTaskButton.Click += new System.EventHandler(this.FinishTaskButton_Click);
+            // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 25;
             this.listBox2.Location = new System.Drawing.Point(6, 9);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(986, 604);
+            this.listBox2.Size = new System.Drawing.Size(786, 604);
             this.listBox2.TabIndex = 0;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.listBox1);
+            this.tabPage2.Controls.Add(this.CreateTaskButton);
+            this.tabPage2.Controls.Add(this.EndDateBox);
+            this.tabPage2.Controls.Add(this.StartDateBox);
+            this.tabPage2.Controls.Add(this.TaskDescriptionBox);
+            this.tabPage2.Controls.Add(this.TaskNameBox);
+            this.tabPage2.Controls.Add(this.TEndDateLabel);
+            this.tabPage2.Controls.Add(this.TStartDateLabel);
+            this.tabPage2.Controls.Add(this.TDescriptionLabel);
+            this.tabPage2.Controls.Add(this.TaskNameLabel);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -141,24 +179,79 @@
             this.tabPage2.Text = "Create";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // CreateTaskButton
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(6, 8);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(986, 604);
-            this.listBox1.TabIndex = 0;
+            this.CreateTaskButton.Location = new System.Drawing.Point(333, 343);
+            this.CreateTaskButton.Name = "CreateTaskButton";
+            this.CreateTaskButton.Size = new System.Drawing.Size(357, 59);
+            this.CreateTaskButton.TabIndex = 8;
+            this.CreateTaskButton.Text = "Create Task";
+            this.CreateTaskButton.UseVisualStyleBackColor = true;
+            this.CreateTaskButton.Click += new System.EventHandler(this.CreateTaskButton_Click);
             // 
-            // pictureBox2
+            // EndDateBox
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(274, 238);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.EndDateBox.Location = new System.Drawing.Point(333, 264);
+            this.EndDateBox.Name = "EndDateBox";
+            this.EndDateBox.Size = new System.Drawing.Size(357, 31);
+            this.EndDateBox.TabIndex = 7;
+            // 
+            // StartDateBox
+            // 
+            this.StartDateBox.Location = new System.Drawing.Point(333, 208);
+            this.StartDateBox.Name = "StartDateBox";
+            this.StartDateBox.Size = new System.Drawing.Size(357, 31);
+            this.StartDateBox.TabIndex = 6;
+            // 
+            // TaskDescriptionBox
+            // 
+            this.TaskDescriptionBox.Location = new System.Drawing.Point(333, 149);
+            this.TaskDescriptionBox.Name = "TaskDescriptionBox";
+            this.TaskDescriptionBox.Size = new System.Drawing.Size(357, 31);
+            this.TaskDescriptionBox.TabIndex = 5;
+            // 
+            // TaskNameBox
+            // 
+            this.TaskNameBox.Location = new System.Drawing.Point(333, 94);
+            this.TaskNameBox.Name = "TaskNameBox";
+            this.TaskNameBox.Size = new System.Drawing.Size(357, 31);
+            this.TaskNameBox.TabIndex = 4;
+            // 
+            // TEndDateLabel
+            // 
+            this.TEndDateLabel.AutoSize = true;
+            this.TEndDateLabel.Location = new System.Drawing.Point(172, 270);
+            this.TEndDateLabel.Name = "TEndDateLabel";
+            this.TEndDateLabel.Size = new System.Drawing.Size(84, 25);
+            this.TEndDateLabel.TabIndex = 3;
+            this.TEndDateLabel.Text = "End Date";
+            // 
+            // TStartDateLabel
+            // 
+            this.TStartDateLabel.AutoSize = true;
+            this.TStartDateLabel.Location = new System.Drawing.Point(172, 214);
+            this.TStartDateLabel.Name = "TStartDateLabel";
+            this.TStartDateLabel.Size = new System.Drawing.Size(90, 25);
+            this.TStartDateLabel.TabIndex = 2;
+            this.TStartDateLabel.Text = "Start Date";
+            // 
+            // TDescriptionLabel
+            // 
+            this.TDescriptionLabel.AutoSize = true;
+            this.TDescriptionLabel.Location = new System.Drawing.Point(172, 155);
+            this.TDescriptionLabel.Name = "TDescriptionLabel";
+            this.TDescriptionLabel.Size = new System.Drawing.Size(140, 25);
+            this.TDescriptionLabel.TabIndex = 1;
+            this.TDescriptionLabel.Text = "Task Description";
+            // 
+            // TaskNameLabel
+            // 
+            this.TaskNameLabel.AutoSize = true;
+            this.TaskNameLabel.Location = new System.Drawing.Point(172, 100);
+            this.TaskNameLabel.Name = "TaskNameLabel";
+            this.TaskNameLabel.Size = new System.Drawing.Size(97, 25);
+            this.TaskNameLabel.TabIndex = 0;
+            this.TaskNameLabel.Text = "Task Name";
             // 
             // Form4
             // 
@@ -175,10 +268,11 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.Tabpage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -194,7 +288,16 @@
         private TabPage tabPage2;
         private PictureBox pictureBox1;
         private ListBox listBox2;
-        private ListBox listBox1;
         private PictureBox pictureBox2;
+        private Label TDescriptionLabel;
+        private Label TaskNameLabel;
+        private Label TStartDateLabel;
+        private Label TEndDateLabel;
+        private Button CreateTaskButton;
+        private TextBox EndDateBox;
+        private TextBox StartDateBox;
+        private TextBox TaskDescriptionBox;
+        private TextBox TaskNameBox;
+        private Button FinishTaskButton;
     }
 }
