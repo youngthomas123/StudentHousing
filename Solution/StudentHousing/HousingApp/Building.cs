@@ -9,8 +9,12 @@ namespace HousingApp
 {
     public class Building
     {
-        private int NumOfStudentsHoused;
-        private int NumOfRooms;
-        private string AdminName;
+        private int NumOfStudents;
+        private int NumberOfAdmins;
+        private int NumOfHouse;
+        private List<Student> AllStudents;
+        private List<House> AllHouse;
+        private List<Admin> AllAdmins;
+
     }
 }

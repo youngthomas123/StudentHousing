@@ -20,7 +20,7 @@ namespace HousingApp
             UserName = userName;
             Password = password;
             Random random = new Random();
-            UniqueId = random.Next(1000, 10000);
+            UniqueId = random.Next(10000, 100000);
         }
         public string GetUsername()
         {
