@@ -28,5 +28,9 @@ namespace HousingApp
         {
             studentsInHouse.Add(student);   
         }
+        public List<Student> GetStudentsInHouse()
+        {
+            return studentsInHouse;
+        }
     }
 }
