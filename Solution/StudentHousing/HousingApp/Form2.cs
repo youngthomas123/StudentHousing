@@ -14,10 +14,12 @@ namespace HousingApp
 {
     public partial class Form2 : Form
     {
-        
-        public Form2()
+        private readonly Building building;
+
+        public Form2(Building building)
         {
             InitializeComponent();
+            this.building = building;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -50,7 +52,7 @@ namespace HousingApp
         {
             Student student = new Student(UserNameTB.Text, PasswordTB.Text);
             
-
+            
         }
     }
 }
