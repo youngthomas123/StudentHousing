@@ -12,9 +12,11 @@ namespace HousingApp
 {
     public partial class Form4 : Form
     {
-        public Form4()
+        private readonly Building building;
+        public Form4(Building building)
         {
             InitializeComponent();
+            this.building = building;
         }
          
 
