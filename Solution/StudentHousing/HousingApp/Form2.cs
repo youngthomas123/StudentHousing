@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design.Serialization;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
@@ -13,6 +14,7 @@ namespace HousingApp
 {
     public partial class Form2 : Form
     {
+        
         public Form2()
         {
             InitializeComponent();
@@ -41,6 +43,13 @@ namespace HousingApp
 
         private void label6_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)  // write to file
+        {
+            Student student = new Student(UserNameTB.Text, PasswordTB.Text);
+            
 
         }
     }

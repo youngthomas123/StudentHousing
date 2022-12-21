@@ -32,8 +32,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.UserNameTB = new System.Windows.Forms.TextBox();
+            this.PasswordTB = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,23 +74,23 @@
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // textBox1
+            // UserNameTB
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.DarkGray;
-            this.textBox1.Location = new System.Drawing.Point(82, 385);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(332, 31);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Username";
+            this.UserNameTB.ForeColor = System.Drawing.Color.DarkGray;
+            this.UserNameTB.Location = new System.Drawing.Point(82, 385);
+            this.UserNameTB.Name = "UserNameTB";
+            this.UserNameTB.Size = new System.Drawing.Size(332, 31);
+            this.UserNameTB.TabIndex = 1;
+            this.UserNameTB.Text = "Username";
             // 
-            // textBox2
+            // PasswordTB
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.DarkGray;
-            this.textBox2.Location = new System.Drawing.Point(82, 451);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(332, 31);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Password";
+            this.PasswordTB.ForeColor = System.Drawing.Color.DarkGray;
+            this.PasswordTB.Location = new System.Drawing.Point(82, 451);
+            this.PasswordTB.Name = "PasswordTB";
+            this.PasswordTB.Size = new System.Drawing.Size(332, 31);
+            this.PasswordTB.TabIndex = 1;
+            this.PasswordTB.Text = "Password";
             // 
             // checkBox1
             // 
@@ -113,6 +113,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -155,8 +156,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PasswordTB);
+            this.Controls.Add(this.UserNameTB);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -177,8 +178,8 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox UserNameTB;
+        private TextBox PasswordTB;
         private CheckBox checkBox1;
         private Button button1;
         private Label label1;
