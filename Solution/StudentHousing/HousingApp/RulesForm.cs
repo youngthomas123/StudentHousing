@@ -10,23 +10,24 @@ using System.Windows.Forms;
 
 namespace HousingApp
 {
-    public partial class Form3 : Form
+    public partial class RulesForm : Form
     {
         private readonly Building building;
-        public Form3(Building building)
+        public RulesForm(Building building)
         {
             InitializeComponent();
-            this.building = building;
+            this.building = building;   
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void pictureBox7_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void RulesForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            FormManager.rulesForm = null;
+            FormManager.MenuForm.Show();
         }
     }
 }

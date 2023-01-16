@@ -9,17 +9,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace HousingApp
 {
-    public partial class Form2 : Form
+    public partial class SignUpForm : Form
     {
         private readonly Building building;
 
-        public Form2(Building building)
+        public SignUpForm(Building building)
         {
             InitializeComponent();
             this.building = building;
+            foreach(House house in building.GetHouse())
+            {
+                HouseCB.Items.Add(house);   
+            }
+            
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -29,7 +36,7 @@ namespace HousingApp
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            button2.Enabled = checkBox1.Checked; 
+            SubmitBT.Enabled = TermsCB.Checked; 
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -48,11 +55,64 @@ namespace HousingApp
             
         }
 
-        private void button2_Click(object sender, EventArgs e)  // write to file
+        private void SubmitBT_Click(object sender, EventArgs e)  
         {
-            Student student = new Student(UserNameTB.Text, PasswordTB.Text);
+            if (UserNameTB.Text != "" && PasswordTB.Text != "" && FirstNameTB.Text != "" && LastNameTB.Text != "" && ConformPasswordTB.Text !="" && HouseCB != null && PasswordTB.Text == ConformPasswordTB.Text)
+            {
+                bool CheckIfUnique = true;
+                foreach(Student stu in building.GetStudents())
+                {
+                    if(stu.Username == UserNameTB.Text && stu.Password == PasswordTB.Text)
+                    {
+                        CheckIfUnique = false;
+                        break;
+                    }
+                }
+                if (CheckIfUnique == true)
+                {
+                    Student student = new Student(FirstNameTB.Text, LastNameTB.Text, UserNameTB.Text, PasswordTB.Text, (House)HouseCB.SelectedItem);
+                    building.AddStudent(student);
+                }
+                else
+                {
+                    MessageBox.Show("Enter a different Username or password");
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Invalid Input");
+            }
             
             
+        }
+
+        private void BackToLoginBT_Click(object sender, EventArgs e)
+        {
+            FormManager.loginForm.Show();
+            this.Hide();
+            
+            
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        
+
+        private void SignUpForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormManager.signUpForm = null;
+            FormManager.loginForm.Show();
         }
     }
 }

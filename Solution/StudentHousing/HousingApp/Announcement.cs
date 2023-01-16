@@ -8,16 +8,18 @@ using System.Threading.Tasks;
 namespace HousingApp
 {
     [DataContract]
-    public class Complaint
+    public class Announcement
+
     {
-        
-        public Complaint(string title, string description, string date)
+        public Announcement(string title, string description, string date)
         {
             Title = title;
             Description = description;
             Date = date;
         }
 
+        [DataMember]
+        public string? Firstname { get; set; }
 
         [DataMember]
         public string Title { get; set; }
@@ -26,10 +28,11 @@ namespace HousingApp
         [DataMember]
         public string Date { get; set; }
 
-        
         public override string ToString()
         {
             return Title;
         }
     }
+
+    
 }

@@ -1,36 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace HousingApp
 {
-    internal class House
+    [DataContract]
+    public class House
     {
-        private int HouseNumber;
-        private List<Student> studentsInHouse;
-        private Admin admin;
+        [DataMember]
+        public int Housenumber { get; set; }
+        [DataMember]
+        private List<Complaint> complaints= new List<Complaint>();
+        [DataMember]
+        private List<Announcement> announcements= new List<Announcement>();
+        [DataMember]
+        private List<Task> tasks= new List<Task>();
 
-        public House(int houseNumber)
+        public House(int housenumber)
         {
-            HouseNumber = houseNumber;
-            studentsInHouse= new List<Student>();
-              
+            Housenumber = housenumber;
         }
 
-        public void SetAdmin(Admin admin)
+        public override string ToString()
         {
-            this.admin = admin; 
+            string number = Convert.ToString(Housenumber);
+            return number;
         }
 
-        public void AddStudentToHouse(Student student)
+        public List<Task>GetTasks()
         {
-            studentsInHouse.Add(student);   
+            return tasks;
         }
-        public List<Student> GetStudentsInHouse()
+        public List<Announcement> GetAnnouncements()
         {
-            return studentsInHouse;
+            return announcements;
+        }
+        public List<Complaint> GetComplaints()
+        {
+            return complaints;
+        }
+        public void AddTask(Task task)
+        {
+            tasks.Add(task);
+        }
+        public void AddComplaint(Complaint complaint)
+        {
+            complaints.Add(complaint);
+        }
+        public void AddAnnouncement(Announcement announcement)
+        {
+            announcements.Add(announcement);    
+        }
+
+        public void RemoveTask(Task task)
+        {
+            tasks.Remove(task);
         }
     }
 }
+    
